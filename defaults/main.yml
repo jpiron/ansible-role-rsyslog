@@ -1,6 +1,8 @@
 ---
 # defaults file for rsyslog
 
+rsyslog_configuration_folder: /etc/rsyslog.d
+
 # To configure a server to reveice logs, set rsyslog_receiver to yes.
 # Not setting this value will not configure the server tor receive logs.
 # rsyslog_receiver: yes

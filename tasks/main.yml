@@ -26,7 +26,7 @@
 
 - name: make configuration directory
   file:
-    name: /etc/rsyslog.d/
+    name: "{{ rsyslog_configuration_folder }}"
     state: directory
     mode: "0755"
 
