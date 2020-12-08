@@ -1,0 +1,8 @@
+---
+- name: copy configuration templates
+  template:
+    src: "{{ item }}"
+    dest: "{{ rsyslog_configuration_folder }}/{{ item | basename | regex_replace('\\.j2$', '') }}"
+    mode: '0644'
+  with_fileglob: "{{ rsyslog_configuration_templates_path }}/*.j2"
+  notify: restart rsyslog

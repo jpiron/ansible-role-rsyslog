@@ -44,3 +44,7 @@
     name: "{{ rsyslog_service }}"
     state: started
     enabled: yes
+
+- name: copy configurations
+  import_tasks: copy_configurations.yml
+  when: rsyslog_configuration_templates_path is defined
